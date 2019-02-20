@@ -1,7 +1,8 @@
 import { func1 } from './something/some-file';
 
-const a = 'haha';
-console.log({ a });
-func1().then(str => {
+(async () => {
+    const a = 'haha';
+    console.log({ a });
+    const str = await func1();
     console.log({ str });
-})
+})();

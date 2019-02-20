@@ -2,17 +2,25 @@
   "name": "boilerplate-node-babel-vscode",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build-watch": "npm run build-once -- --watch",
-    "build": "babel src -d build --source-maps"
+    "build": "babel src -d build --source-maps --ignore  **/*.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/core": "^7.3.3",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0"
   }
 }
