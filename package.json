@@ -1,20 +1,31 @@
 {
-  "name": "boilerplate-node-babel-vscode",
+  "name": "google spreadsheet to mysql",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
   "scripts": {
     "test": "jest",
     "build-watch": "npm run build-once -- --watch",
-    "build": "babel src -d build --source-maps --ignore  **/*.test.js"
+    "build": "babel src -d build --source-maps --ignore  **/*.test.js",
+    "download": "node build/download-spreadsheet.js",
+    "create-table": "node build/create-table-for-spreadsheet.js",
+    "insert-to-table": "node build/insert-data-from-spreadsheet.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mysql",
+    "google",
+    "drive",
+    "spreadsheet"
+  ],
+  "author": "Maxim Leizerovich",
   "license": "ISC",
   "jest": {
     "transform": {
       "^.+\\.js?$": "babel-jest"
     }
+  },
+  "dependencies": {
+    "googleapis": "^39.1.0",
+    "mysql": "^2.16.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
