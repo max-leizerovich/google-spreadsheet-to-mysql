@@ -91,12 +91,12 @@ function listMajors(auth) {
         // range: 'Class Data!A2:E',
     }, (err, res) => {
         if (err) return console.log('The API returned an error: ' + err);
-        if (!fs.existsSync('downloads')) {
-            fs.mkdirSync('downloads');
+        if (!fs.existsSync('./downloads')) {
+            fs.mkdirSync('./downloads');
         }
 
         fs.writeFile(
-            `downloads/${spreadsheetId}.json`,
+            `./downloads/${spreadsheetId}.json`,
             JSON.stringify(res.data.values),
             'utf8',
             () => {
