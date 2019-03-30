@@ -3,3 +3,4 @@ build/
 credentials.json
 mysql-credentials.json
 token.json
+downloads/

@@ -27,6 +27,7 @@ const insertSql = `
 
 const values = [...spreadsheetData];
 values.shift();
+values.forEach(val => val.length = columns.length);
 
 const connection = mysql.createConnection(mysqlCredentials);
 connection.connect();
