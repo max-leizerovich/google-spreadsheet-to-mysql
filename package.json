@@ -8,7 +8,8 @@
     "build": "babel src -d build --source-maps --ignore  **/*.test.js",
     "download": "node build/download-spreadsheet.js",
     "create-table": "node build/create-table-for-spreadsheet.js",
-    "insert-to-table": "node build/insert-data-from-spreadsheet.js"
+    "insert-to-table": "node build/insert-data-from-spreadsheet.js",
+    "download-create-insert": "scripts/download-create-insert.sh"
   },
   "keywords": [
     "mysql",
